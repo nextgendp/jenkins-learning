@@ -14,7 +14,7 @@ pipeline{
                 // use sshagent to provide private key
                 sshagent (credentials:[SSH_CRED]){
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_IP} 'mkdir -p ${REMOTE_DIR} && ls -ld ${REMOTE_DIR}'
+                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_IP} 'mkdir -p ${DIR} && ls -ld ${DIR}'
                     '''
                 }
             }
