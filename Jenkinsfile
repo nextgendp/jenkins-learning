@@ -5,7 +5,7 @@ pipeline{
         REMOTE_USER = 'ubuntu'
         REMOTE_IP = '3.6.185.169'
         DIR = '/home/ubuntu/test'
-        SSH_CRED='deploy-ssh-key'
+        SSH_CRED = 'deploy-ssh-key'
     }
     stages{
         stage("Create a Directory"){
