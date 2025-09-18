@@ -13,9 +13,9 @@ pipeline{
                 echo "Creating Directory ${DIR} on ${REMOTE_IP}"
                 // use sshagent to provide private key
                 sshagent (credentials:[SSH_CRED]){
-                    sh '''
+                    sh """
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_IP} 'mkdir -p ${DIR} && ls -ld ${DIR}'
-                    '''
+                    """
                 }
             }
 
